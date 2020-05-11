@@ -56,14 +56,21 @@
             </plugin>
             
 <!--the first step in using another deployment plugin in the deploy phase is to disable the existing, default mapping  -->
-            <plugin>
+            <!-- <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-deploy-plugin</artifactId>
             <version>${maven-deploy-plugin.version}</version>
             <configuration>
                 <skip>true</skip>
             </configuration>
-            </plugin>
+            </plugin> -->
+
+<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
+            <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.8.1</version>
+            </dependency>
 
 <!-- define Nexus repository configuration -->
             <plugin>
@@ -84,6 +91,16 @@
                 <nexusUrl>http://192.168.1.160:8081/</nexusUrl>
                 <skipStaging>true</skipStaging>
             </configuration>
+            </plugin>
+
+<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source />
+                    <target />
+                </configuration>
             </plugin>
 
         </plugins>

@@ -32,6 +32,16 @@
             <artifactId>tomcat-embed-jasper</artifactId>
             <scope>provided</scope>
         </dependency>
+<!-- malformed POM file issue fix : dependency tags instead -->
+        <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+        </dependencies>
+
     </dependencies>
     <build>
         <plugins>

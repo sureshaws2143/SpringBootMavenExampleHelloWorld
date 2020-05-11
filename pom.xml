@@ -116,20 +116,49 @@
         </plugins>
         
 <!-- In order for Maven to be able to deploy the artifacts it creates in the package phase of the build, it needs to define the repository information where the packaged artifacts will be deployed, via the distributionManagement element: -->
-        <distributionManagement>
+
+        <!-- <distributionManagement>
         <snapshotRepository>
             <id>nexus-snapshots</id>
             <url>http://192.168.1.160:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
+        </distributionManagement> -->
+
+        <distributionManagement>
+            <repository>
+            <id>nexus</id>
+            <name>Releases</name>
+            <url>http://192.168.1.160:8081/repository/maven-releases</url>
+            </repository>
+            <snapshotRepository>
+            <id>nexus</id>
+            <name>Snapshot</name>
+            <url>http://192.168.1.160:8081/repository/maven-snapshots</url>
+            </snapshotRepository>
         </distributionManagement>
 
+<!-- Reference /// distributionManagement  -->
+
+            <!-- <distributionManagement>
+                <repository>
+                <id>nexus</id>
+                <name>Releases</name>
+                <url>http://localhost:8081/repository/maven-releases</url>
+                </repository>
+                <snapshotRepository>
+                <id>nexus</id>
+                <name>Snapshot</name>
+                <url>http://localhost:8081/repository/maven-snapshots</url>
+                </snapshotRepository>
+            </distributionManagement> -->
+
 <!-- define Servers and Credentials -->
-        <servers>
+        <!-- <servers>
         <server>
             <id>nexus-snapshots</id>
             <username>deploy-user1</username>
             <password>password</password>
         </server>
-        </servers>
+        </servers> -->
     </build>
 </project>

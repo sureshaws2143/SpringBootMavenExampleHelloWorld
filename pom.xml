@@ -129,7 +129,7 @@
         </snapshotRepository>
         </distributionManagement> -->
 
-        <distributionManagement>
+        <!-- <distributionManagement>
             <repository>
             <id>nexus</id>
             <name>Releases</name>
@@ -140,7 +140,7 @@
             <name>Snapshot</name>
             <url>http://192.168.1.160:8081/repository/maven-snapshots</url>
             </snapshotRepository>
-        </distributionManagement>
+        </distributionManagement> -->
 
 <!-- Reference /// distributionManagement  -->
 

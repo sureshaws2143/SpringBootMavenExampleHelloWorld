@@ -88,7 +88,7 @@
             </plugin> -->
 
 <!-- define Nexus repository configuration -->
-            <plugin>
+            <!-- <plugin>
             <groupId>org.sonatype.plugins</groupId>
             <artifactId>nexus-staging-maven-plugin</artifactId>
             <version>1.5.1</version>
@@ -106,7 +106,7 @@
                 <nexusUrl>http://192.168.1.160:8081/</nexusUrl>
                 <skipStaging>true</skipStaging>
             </configuration>
-            </plugin>
+            </plugin> -->
 
 <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
             <plugin>
